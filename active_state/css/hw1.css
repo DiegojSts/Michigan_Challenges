@@ -1,0 +1,220 @@
+/* /////////////////////////////////////////////// <GLOBALS SECTION> ////////////////////////////////////////////////  */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
+/* /////////////////////////////////////////////// </GLOBALS SECTION> ////////////////////////////////////////////////  */
+
+
+
+/* /////////////////////////////////////////////// <BODY SECTION> ////////////////////////////////////////////////  */
+body {
+    margin: 10px;
+    padding: 10px;
+}
+/* /////////////////////////////////////////////// </BODY SECTION> ////////////////////////////////////////////////  */
+
+
+
+/* /////////////////////////////////////////////// <CSS GRID LAYOUT> ////////////////////////////////////////////////  */
+.container {
+    width: auto;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 168px;
+    grid-template-rows: repeat(4, 25%);
+    grid-template-areas: 
+    
+    "header header header header" 
+    "aside  info info info"
+    "aside  info info info"
+    "footer footer footer footer"
+    ;
+    gap: 5px;
+}
+/* /////////////////////////////////////////////// </CSS GRID LAYOUT> ////////////////////////////////////////////////  */
+
+
+
+/* /////////////////////////////////////////////// <HEADER SECTION> ////////////////////////////////////////////////  */
+
+header {
+   grid-area: header;
+}
+
+img.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 100% 0;
+    z-index: -1;
+}
+
+h1.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-variant: small-caps;
+    font-size: 20px;
+    color: #ffffff;
+    position: relative;
+    top: -145px;
+}
+/* ///////////////////////////////////////////////// <NAV SECTION> //////////////////////////////////////////////// */
+                nav {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                }
+
+                .nav-links{
+                    position: relative;
+                    top: -136px;
+                }
+
+                nav a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+
+                    /* From https://css.glass */
+                    background: #ffffff33;
+                    border-radius: 5px;
+                    box-shadow: 0 4px 30px #0000001a;
+                    backdrop-filter: blur(5px);
+                    -webkit-backdrop-filter: blur(5px);
+                    border: 1px solid #ffffff4d;
+                    color: #000;
+                    width: 200px;
+                    height: 45px;
+                    opacity: 1.0;
+                }
+                
+                .active{
+                    background-color: lightblue;
+                }
+       
+/* /////////////////////////////////////////////// </NAV SECTION> //////////////////////////////////////////////// */
+
+/* /////////////////////////////////////////////// </HEADER SECTION> ////////////////////////////////////////////////  */
+
+
+
+/* /////////////////////////////////////////////// <ASIDE SECTION> ////////////////////////////////////////////////  */
+aside {
+    grid-area: aside;
+    margin: 0 0 -72px 0;
+
+}
+
+                img.aside-image{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: 32%;
+                    gap: 11px;
+                    margin: 0 0 5px 0;
+                }
+/* /////////////////////////////////////////////// </ASIDE SECTION> ////////////////////////////////////////////////  */
+
+
+
+/* /////////////////////////////////////////////// <CONTENT SECTION> ////////////////////////////////////////////////  */
+content {
+    background-color: #dddada;
+    position: relative;
+    grid-area: info;
+    height: 348px;
+}
+              
+                section.content-section div > h1{
+                    text-align: center;
+                    color: #000000;
+                }
+                section.content-section div {
+                    padding: 10px;
+                    text-align: justify;
+                    text-justify: inter-word;
+                    
+                }
+
+                section.content-section div {
+                    display: none;
+                 }
+                section.content-section div:target {
+                    display: block;
+                 }
+            
+                      
+                        table {
+                            text-align: center;
+                            font-family: arial, sans-serif;
+                            width: 40%;
+                            margin: 0 0 0 50px;
+                            font-size: 1rem;
+                            cursor: default;
+                            
+                        }
+
+                        th:first-child, td:first-child{
+                            text-align: left;
+                        }
+                        
+                        td, th {
+                              border-radius: 0;
+                              width: 30%;
+                          }
+
+                          td{
+                            font-weight: 100;
+                            color: #ffffff;
+                            border: 1px solid;
+                            padding: 3px;
+                            font-size: 12px;
+                          }
+
+                          th {
+                              color: #ffffff;
+                              background-color: #000000;
+                              border: 1px solid ;
+                              padding: 4px;
+                          }
+                       
+                          tr {
+                              opacity: 0.8;
+                          }
+
+                          tr:hover{
+                              opacity: 2;
+                              
+                          }
+                        
+                          tr:nth-child(even) {
+                            background-color: #9297a0;
+                          }
+                          tr:nth-child(odd) {
+                            background-color: #2c2f35;
+                          }
+                
+/* /////////////////////////////////////////////// </CONTENT SECTION> ////////////////////////////////////////////////  */
+
+
+
+/* /////////////////////////////////////////////// <FOOTER SECTION> ////////////////////////////////////////////////  */
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    height: 80px;
+    margin-top: 70px;
+}
+
+img.logo {
+    width: 100px;
+    height: 60px;
+}
+
+/* /////////////////////////////////////////////// </FOOTER SECTION> ////////////////////////////////////////////////  */
